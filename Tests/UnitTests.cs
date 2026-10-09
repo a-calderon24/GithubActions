@@ -27,3 +27,16 @@ public class Addition
 		Assert.ThrowsException<ArgumentNullException>(() => Program.Add(null, null));
 	}
 }
+
+[TestClass]
+public class PowerTests
+{
+    [TestMethod]
+    public void Power_Succeeds()
+    {
+
+        //2 to the 3rd power is 8, saying it equals 9 makes the test fail
+        Assert.AreEqual(8, Program.Power("2", "3"));
+		//Changed the value back to 8 to pass the test
+	}
+}
